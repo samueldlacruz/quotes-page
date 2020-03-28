@@ -1,5 +1,7 @@
  import React, { Component } from 'react';
 import QuoteAndAuthor from './components/QuoteAndAuthor/';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import quotes from './data/quotes';
 import './App.css';
 
@@ -11,9 +13,6 @@ class  App extends Component{
 
   componentDidMount() {
     this.refreshQuote();
-    this.setState({
-      arrayQuotesSaved: JSON.parse(localStorage.getItem('quotes'))
-    })
   }
   
   randomQuote = () => {
@@ -32,13 +31,27 @@ class  App extends Component{
         author: selectRandomQuote.author
      });
      this.shuffleQuotes(quotes);
-  };
+  }; 
+
+  handleTheme = () => {
+    const body = document.body;
+
+    if (body.classList.contains('light')) {
+      body.classList.replace('light', 'dark');
+    } else {
+      body.classList.replace('dark', 'light');
+    }
+    
+  }
 
   render(){
   return (
     <React.Fragment>
     <div className="container">
-     <h1 className="title">Blessed Quotes App</h1>
+    <h1 className="title">Blessed Quotes App</h1>
+      <button onClick={this.handleTheme}>
+        <FontAwesomeIcon icon={faMoon} />Dark Mode
+      </button>
       <QuoteAndAuthor 
         handleRefresh={this.refreshQuote}
         handleCopy={this.copyQuote}

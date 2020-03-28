@@ -3,7 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --gray0: #f8f8f8;
+  --gray1: #12181b;
+}
+
+.light {
+  --bg: var(--gray0);
+  --text: var(--gray1);
+  --border-color: var(--gray1);
+}
+
+.dark {
+  --bg: var(--gray1);
+  --text: var(--gray0);
+  --border-color: var(--gray0);
+}
+
 body {
   font-family: 'Vesper Libre', serif;
   font-size: 18px;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: 500ms ease-in-out;
 }
