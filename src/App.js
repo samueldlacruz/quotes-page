@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
+ import React, { Component } from 'react';
+import QuoteAndAuthor from './components/QuoteAndAuthor/';
+import quotes from './data/quotes';
 import './App.css';
 
-function App() {
+class  App extends Component{
+  state = {
+    quote: '',
+    author: ''
+  }
+
+  componentDidMount() {
+    this.refreshQuote();
+    this.setState({
+      arrayQuotesSaved: JSON.parse(localStorage.getItem('quotes'))
+    })
+  }
+  
+  randomQuote = () => {
+    const randomNumber = Math.floor(Math.random() * quotes.length);
+    return quotes[randomNumber];
+  }; 
+
+  shuffleQuotes = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
+  refreshQuote = () => {
+     const selectRandomQuote = this.randomQuote();
+     this.setState({
+        quote: selectRandomQuote.quote,
+        author: selectRandomQuote.author
+     });
+     this.shuffleQuotes(quotes);
+  };
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <React.Fragment>
+    <div className="container">
+     <h1 className="title">Blessed Quotes App</h1>
+      <QuoteAndAuthor 
+        handleRefresh={this.refreshQuote}
+        handleCopy={this.copyQuote}
+        {...this.state}>
+      </QuoteAndAuthor>
     </div>
+    </React.Fragment>
   );
+  }
 }
 
 export default App;

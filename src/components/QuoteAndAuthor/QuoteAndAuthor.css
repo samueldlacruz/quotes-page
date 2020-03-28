@@ -1,0 +1,27 @@
+.quote-card {
+ padding: 2em;
+ text-align: center;
+ width: 100%;
+ border: 3px solid #0f0f0f;
+ box-sizing: border-box;
+ opacity: 0;
+ display: block;
+ transition: 600ms ease-out;
+ background-color: rgba(0, 0, 2, 0.05);
+ animation: slidein 1s ease-out forwards;
+}
+
+.quote-text {
+    font-size: 1.2em;
+}
+ 
+@keyframes slidein {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
