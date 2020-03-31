@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import QuoteOptions from '../QuoteOptions/';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import './QuoteAndAuthor.css';
 
 export class QuoteAndAuthor extends Component {
@@ -28,7 +30,7 @@ export class QuoteAndAuthor extends Component {
         return (
             <div className="quote-card">
              <div className="quote-text" ref={this.copyText}>
-                 <p>"{quote}"</p>
+                 <p><FontAwesomeIcon icon={faQuoteLeft}/> {quote}"</p>
                  <p><strong>-{author}</strong></p>
              </div>
              <QuoteOptions 
