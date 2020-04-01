@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRedo, faCopy } from '@fortawesome/free-solid-svg-icons';
 import './QuoteOptions.css';
@@ -16,5 +17,10 @@ const QuoteOptions = ({ onRefresh, onCopy }) => {
     </div>
     )
 };
+
+QuoteOptions.propTypes = {
+    onRefresh: PropTypes.func.isRequired,
+    onCopy: PropTypes.func.isRequired
+}
 
 export default QuoteOptions;

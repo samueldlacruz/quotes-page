@@ -1,4 +1,4 @@
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 import QuoteAndAuthor from './components/QuoteAndAuthor/';
 import SwitcherTheme from './components/SwitcherTheme/';
 import quotes from './data/quotes';

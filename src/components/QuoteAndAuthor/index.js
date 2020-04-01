@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import QuoteOptions from '../QuoteOptions/';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
@@ -26,7 +27,7 @@ export class QuoteAndAuthor extends Component {
     }
 
     render() {
-        let {quote, author} = this.props;
+        let { quote, author } = this.props;
         return (
             <div className="quote-card">
              <div className="quote-text" ref={this.copyText}>
@@ -41,6 +42,11 @@ export class QuoteAndAuthor extends Component {
             </div>
         )
     }
+}
+
+QuoteAndAuthor.propTypes = {
+    quote: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired
 }
 
 export default QuoteAndAuthor;
