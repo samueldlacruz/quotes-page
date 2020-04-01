@@ -1,3 +1,11 @@
+# Quotes App
+
+this is app was created with: **react**, **react-fontawesome**, **css** and **hard work**.
+
+is simple because i was learning react, it has **Dark Mode** and **copy to clipboard**.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
