@@ -34,7 +34,6 @@ class  App extends Component{
 
   render(){
   return (
-    <React.Fragment>
     <div className="container">
     <h1 className="title">Blessed Quotes App</h1>
      <SwitcherTheme></SwitcherTheme>
@@ -44,7 +43,6 @@ class  App extends Component{
         {...this.state}>
       </QuoteAndAuthor>
     </div>
-    </React.Fragment>
   );
   }
 }

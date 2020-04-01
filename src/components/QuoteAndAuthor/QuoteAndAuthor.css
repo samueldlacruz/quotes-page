@@ -1,5 +1,6 @@
 .quote-card {
  padding: 2em;
+ margin-top: 15px;
  text-align: center;
  width: 100%;
  border: 3px solid var(--border-color);

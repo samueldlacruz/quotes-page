@@ -1,0 +1,12 @@
+.switcher-button {
+    all: unset;
+    cursor: pointer;
+    align-self: flex-end;
+    padding: .5em  1em;
+    text-align: center;
+    color: var(--text);
+    border: 3px solid var(--border-color);
+    box-sizing: border-box;
+    transition: 600ms ease-out;
+    background-color: rgba(0, 0, 2, 0.05);
+}
