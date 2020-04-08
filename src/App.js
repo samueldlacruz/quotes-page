@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import QuoteAndAuthor from './components/QuoteAndAuthor/';
 import SwitcherTheme from './components/SwitcherTheme/';
 import quotes from './data/quotes';
-import './App.css';
+import './App.scss';
 
 class  App extends Component{
   state = {
@@ -35,7 +35,7 @@ class  App extends Component{
   render(){
   return (
     <div className="container">
-    <h1 className="title">Blessed Quotes App</h1>
+    <h1 className="container__title">Blessed Quotes App</h1>
      <SwitcherTheme></SwitcherTheme>
       <QuoteAndAuthor 
         handleRefresh={this.refreshQuote}
