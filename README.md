@@ -1,6 +1,6 @@
 # Quotes App
 
-this is app was created with: **react**, **react-fontawesome**, **css** and **hard work**.
+this is app was created with: **react**, **react-fontawesome**, **sass** and **hard work**.
 
 is simple because i was learning react, it has **Dark Mode** and **copy to clipboard**.
 
