@@ -1,0 +1,9 @@
+.quote-options {
+    padding: 1em;
+
+ &__button {
+    all: unset;
+    cursor: pointer;
+    padding-left: 15px;
+ }
+}
